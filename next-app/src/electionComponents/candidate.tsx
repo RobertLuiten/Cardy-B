@@ -3,15 +3,18 @@
 import React from "react";
 
 /**
- * A simple implementation of a candidate!
+ * A simple implementation of a candidate! Candidates are now objects, which should
+ * hopefully help with keeping everything relatively simple.
  */
 
 
 export interface CandidateProps {
+    //Place all candidate props here
     candidate_name : string;
 }
 
 export interface Candidate {
+    //Place all candidate info here
     candidate_name : string;
     render() : any;
 }
@@ -19,13 +22,17 @@ export interface Candidate {
 
 export class Candidate {
 
+    /**
+     * Creates a new candidate
+     * @param props The information on the candidate
+     */
     constructor (props : CandidateProps){
         this.candidate_name = props.candidate_name;
     }
 
     /**
-     * A simple renderer
-     * @returns A rendered card of the candidate
+     * Renders the candidate
+     * @returns A generic rendered "card" for the candidate
      */
     render() {
         return (

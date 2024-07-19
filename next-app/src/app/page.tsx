@@ -1,4 +1,5 @@
 "use client"
+
 import { Candidate } from "@/electionComponents/candidate";
 import { Contest, ContestProps } from "@/electionComponents/contest";
 import { Election, ElectionProps } from "@/electionComponents/election";

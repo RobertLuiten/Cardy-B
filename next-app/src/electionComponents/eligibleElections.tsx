@@ -9,22 +9,25 @@ import { Election, ElectionProps } from "./election";
  * times (i.e. primary elections v.s. general elections).
  * 
  * TODOs:
- * 1. Make actually work :D
+ * 1. Make actually work... at least it prints something currently...
  */
 
 
 export interface EligibleElectionsProps {
+    //Set for any list of election props
     electionList : ElectionProps[]|null;
 }
 
 export interface EligibleElections {
+    //Set for any list of elections
     electionList : ElectionProps[]|null;
 }
 
 
 /**
  * This is the component being rendered on the user's homepage, and will display
- * all elections for which they are eligible for.
+ * all elections for which they are eligible for. (Will be for the election dropdown
+ * menu basically)
  */
 export class EligibleElections extends React.Component <EligibleElectionsProps> {
     
