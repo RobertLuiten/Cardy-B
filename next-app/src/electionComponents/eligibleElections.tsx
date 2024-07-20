@@ -6,21 +6,22 @@ import { Election, ElectionProps } from "./election";
 /**
  * This is the eligibleElections, which is basically the list of all upcoming elections the user
  * can vote in. Note that differenent elections are collections of races that happen at different
- * times (i.e. primary elections v.s. general elections).
- * 
- * TODOs:
- * 1. Make actually work... at least it prints something currently...
+ * times (i.e. primary elections v.s. general elections). Need to still implement this though
  */
 
 
 export interface EligibleElectionsProps {
     //Set for any list of election props
-    electionList : ElectionProps[]|null;
+    electionList : ElectionProps[];
+}
+
+export interface EligibleElectionsState {
+    current_election : ElectionProps;
 }
 
 export interface EligibleElections {
     //Set for any list of elections
-    electionList : ElectionProps[]|null;
+    electionList : ElectionProps[];
 }
 
 
@@ -29,7 +30,7 @@ export interface EligibleElections {
  * all elections for which they are eligible for. (Will be for the election dropdown
  * menu basically)
  */
-export class EligibleElections extends React.Component <EligibleElectionsProps> {
+export class EligibleElections extends React.Component <EligibleElectionsProps, EligibleElectionsState> {
     
     /**
      * Creates the list of elections!
@@ -37,9 +38,10 @@ export class EligibleElections extends React.Component <EligibleElectionsProps> 
      */
     constructor(props : EligibleElectionsProps){
         super(props);
-        if (props.electionList === null){
-            this.electionList = null;
+        if (props.electionList.length === 0){
+            this.electionList = props.electionList;
         } else {
+            this.state = {current_election : props.electionList[0]};
             this.electionList = props.electionList;
         }
     }
@@ -52,25 +54,16 @@ export class EligibleElections extends React.Component <EligibleElectionsProps> 
     render() {
         if (this.electionList === null){
             return (
-                <h1 className="You ain't eligible for any elections, yo."></h1>
+                <h1 className="You ain't eligible for any elections, bro. :("></h1>
             );
         } else {
-            const [myElection, setElection] = useState(this.electionList[0]);
             return (
                 <div>
-                    <select name="Elections" id="electionList">
-                        {this.electionList.map((election, index) => 
-                            <option key={index} onChange={() => setElection(election)}>
-                                {election.election_type}
-                            </option>
-                        )}
-                    </select>
-                <Election {...myElection}/>
+                <Election {...this.state.current_election}/>
                 </div>
             );
         }
     }
-
 
 
 }

@@ -5,11 +5,8 @@ import { Contest, ContestProps } from "./contest";
 import { Candidate } from "./candidate";
 
 /**
- * This is the elections class, this is basically a collection of contests during a particular election
- * that the user is eligible for! Simpliest class for sure, doesn't even have a state! Probably doesn't
- * need to be a class, but hopefully can make everything simpler!
+ * A simple implementation of an Election class
  */
-
 
 export interface ElectionProps {
     //Set for any election props
@@ -25,6 +22,7 @@ export interface Election {
 }
 
 export interface ElectionState{
+    //The ballot of candidates in the form of a map!
     ballot : Map<String, Candidate|null>;
 }
 

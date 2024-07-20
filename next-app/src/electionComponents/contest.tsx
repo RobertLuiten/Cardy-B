@@ -4,7 +4,8 @@ import React from "react";
 import { Candidate } from "./candidate";
 
 /**
- * A simple implementation of contest class
+ * A simple implementation of the Contest class: probably the most confusing class by a long shot,
+ * but hopefully clear enough to tell what's going on!
  */
 
 
@@ -41,16 +42,39 @@ export class Contest extends React.Component <ContestProps, ContestState> {
         this.contest_name = props.contest_name;
         this.state = {pinned : null, remaining_candidates : props.candidates, removed_candidates : []};
         if (props.addCandidate != undefined){
-            this.addCandidate = props.addCandidate.bind(this);
+            this.addCandidate = props.addCandidate;
         }
     }
 
+    /**
+     * Pins a candidate, along with connecting a candidate if under an election
+     * @param candidate The candidate to pin, or null if removing one
+     */
     pinCandidate(candidate : Candidate|null){
-        this.setState({pinned : candidate});
-        if (candidate != null && this.addCandidate != null){
+        if (this.state.pinned != null){
+            this.restoreCandidate(this.state.pinned);
+        }
+        this.setState({pinned : candidate, remaining_candidates : this.state.remaining_candidates.filter(item => item != candidate)});
+        if (this.addCandidate != null){
             this.addCandidate(candidate, this.contest_name);
         }
     }
+
+    /**
+     * Renders the contest
+     * @returns A rendered list of the pinned candidate and others for the elections
+     */
+        render() {
+            return (
+                <div>
+                    <h3 className="font-bold text-xl">{this.contest_name}</h3>
+                    <div >
+                        {this.renderLists()}
+                    </div>
+                </div>
+            );
+        }
+    
 
     /**
      * Renders the pinned candidate
@@ -70,22 +94,7 @@ export class Contest extends React.Component <ContestProps, ContestState> {
             border-1 rounded-lg p-6 flex flex-col gap-0 items-start w-[calc(200px+1.5rem)]">
                 {this.state.pinned.render()}
                 <button className="rounded-lg w-full h-full bg-[#FF0000] hover:bg-[#D3D3D3]" 
-                onClick={() => this.pinCandidate(null)}>Unpin</button>
-            </div>
-        );
-    }
-
-    /**
-     * The render for the contest
-     * @returns A rendered list of the pinned candidate and others for the elections
-     */
-    render() {
-        return (
-            <div>
-                <h3 className="font-bold text-xl">{this.contest_name}</h3>
-                <div >
-                    {this.renderLists()}
-                </div>
+                onClick={() => this.pinCandidate(null) }>Unpin</button>
             </div>
         );
     }
@@ -101,7 +110,7 @@ export class Contest extends React.Component <ContestProps, ContestState> {
                     {this.renderPinned()}
                 </div>
             {this.state.remaining_candidates.map((candidate, index) => 
-                <div key={index} className="flex-none bg-card hover:bg-neutral-100 elevation-1 border border-1 rounded-lg p-6 flex flex-col gap-0 items-start h-full w-[calc(200px+1.5rem)]">
+                <div key={index} className="flex-none content-center bg-card hover:bg-neutral-100 elevation-1 border border-1 rounded-lg p-6 flex flex-col gap-0 items-start h-full w-[calc(200px+1.5rem)]">
                     {candidate.render()}
                     <div>
                     <div>
@@ -109,7 +118,7 @@ export class Contest extends React.Component <ContestProps, ContestState> {
                         onClick={() => this.pinCandidate(candidate)}>Pin!</button>
                     </div>
                     <div>
-                        <button className="rounded-lg w-full h-full bg-[#947fee] hover:bg-[#D3D3D3]" 
+                        <button className="rounded-lg w-full h-full bg-[#ffcbcb] hover:bg-[#D3D3D3]" 
                         onClick={() => this.removeCandidate(candidate)}>Remove!</button>               
                     </div>
                     </div>
