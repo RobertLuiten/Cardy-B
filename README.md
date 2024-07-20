@@ -30,6 +30,7 @@ Each class contains it's related interfaces for it's props, state, and themselve
 I tried to keep each interface and class as minimalistic, general, and basic as possible, so for the most part refactoring (I think I'm using that word right) shouldn't be too difficult as long as the interfaces are replaced and the render() functions as rewritten. Also, this way on the /ballot page on Clearvote, we'll only need to call a new instance of EligibleElections and we can build it from the ground up. I've been looking at the ClearVote code and I think it wouldn't take long to implement.
 
 **Other things I want to add**
+
 First I want to actually implement EligibleElection, and also I want to implement undo/redo buttons, which shouldn't be that hard!
 
 
