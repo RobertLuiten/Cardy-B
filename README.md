@@ -4,34 +4,32 @@ To run, simply cd to next-app, run the command "npx next dev", visit localhost:3
 
 **How does it work?**
 
-I tried to make Cardy-B as general as possible, so that's why everything's really simple! Also, tailwind was freaking out in this project file for some reason, so I appologize for how ugly it works. I'm treating this more as a proof of concept than anything.
+Cardy-B works with ClearVote's parsed JSON files: an example of these files can be found at next-app/public/data/electionFoo.json. Taking the parameters from these files (which can be found in the various interfaces), it prints out the elections for all candidates!
 
 **The class heirarchy!**
 
 The heirachy works as follows (you can find all these files in Cardy-B/next-app/src/electionComponents):
 
-EligibleElections (in eligibleElections): EligibleElections takes in the props for all of the Elections that the user is eligible for and provides a pop-up menu where the user can choose the election which they want to see the data for (note that this part isn't done yet for the demo right now). It passes down the ElectionProps to the selected election
-
 Elections (in elections): Elections stores the ballot of selected candidate choices for the user, while also rendering it's name, the user's ballot, and all of the Contests that are a part of that election. It passes down a ContestProp from the array "contests" for each contest. It also passes down the "addCandidate" function from Elections to each ContestProp so that the ballot can be updated.
 
-Contest (in contest): An indivual contest simpy prints out the currently selected pinned candidate for that contest for the user (passing it back to it's Election parent as well), while also rendering the list of candidates that the user is still interested in and not interested in. The buttons & cards for the candidates are also rendered here as well: that way, calling render() on a candidate will only give general formating for more flexability. I dunno if this is the best way to do it, but I'd love feedback! Also, I know this is the messiest and most confusing part of the project, so it might need a bit more work here as well.
+Contest (in contest): The Contest function passes up the "restoreCandidate" function to it's election if it's applicable! Contest prints out the contest name, all of the candidates running, along with giving the user the option to vote for or 'reject' candidates. Once a user selects a candidate or narrows down their choices, the row will collapse until a candidate is deselected. It passes CandidateProps to Candidate components.
 
-Candidate (in candidate): Probably the simpliest class in this entire project, candidate simply renders information about itself. Joey suggested connecting it to the Pokedex API for this demo, but I ran out of time. Either way, it should be relative easy to implement more information for Candidates, as we'd simply have to change the Candidate Interface to the one that ClearVote utilizes!
+Candidate (in candidate): Probably the simpliest class in this entire project, candidate basically renders a candidate card based on it's candidate info for now.
 
 A beautiful flow-chart:
-EligibleElections -> Election -> Contest -> Candidate
+Election -> Contest -> Candidate
 
 **How it's structured!**
 
-Each class contains it's related interfaces for it's props, state, and themselves in their same file. Each file only has a depency on it's direct children (with the exception of elections.tsx having a depency on candidate.tsx as well), so depency issues shouldn't be a problem!
+Each class contains it's related interfaces for it's props, state, and themselves in their same file. Each file only has a depency on it's direct children (with the exception of elections.tsx having a depency on candidate.tsx as well), so depency issues shouldn't be a problem! Classes are not depenedent on their parents which allows for more flexability.
 
 **How can we implement this into ClearVote Rob?!**
 
-I tried to keep each interface and class as minimalistic, general, and basic as possible, so for the most part refactoring (I think I'm using that word right) shouldn't be too difficult as long as the interfaces are replaced and the render() functions as rewritten. Also, this way on the /ballot page on Clearvote, we'll only need to call a new instance of EligibleElections and we can build it from the ground up. I've been looking at the ClearVote code and I think it wouldn't take long to implement.
+Since each interface and the hierachy is structured the same way that ClearVote's data is structured, implementation will be relatively simple! The main thing to work on will be styling!
 
-**Other things I want to add**
+**TODOS**
 
-First I want to actually implement EligibleElection, and also I want to implement undo/redo buttons, which shouldn't be that hard!
+Besides styling which isn't a major issue at the moment for the scope of this project, implementing a dropdown to allow the user to select elections that they're eligible for may be a good idea!
 
 
-Note: For people reading this without context for some reason, I created this simple voting demo for an open source project called Clearvote. This demo is very bear bones, so please excuse my awesome graphic design!
+Note: For people reading this without context in the future, I hope you appriciate my awesome graphic design!

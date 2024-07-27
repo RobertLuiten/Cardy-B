@@ -3,9 +3,7 @@
 import { Candidate, PolitigramProps } from "@/electionComponents/candidate";
 import { ContestProps } from "@/electionComponents/contest";
 import { Election, ElectionProps } from "@/electionComponents/election";
-import { EligibleElections } from "@/electionComponents/eligibleElections";
 import { useEffect, useState } from "react";
-//import { EligibleElections, EligibleElectionsProps } from "@/electionComponents/eligibleElections";
 
 /**
  * This is a simple demo using the provided electionFoo.JSON file provided to me
