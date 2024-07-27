@@ -57,6 +57,7 @@ export class EligibleElections extends React.Component <EligibleElectionsProps, 
                 <h1 className="You ain't eligible for any elections, bro. :("></h1>
             );
         } else {
+            //TODO: Implement dropdown
             return (
                 <div>
                 <Election {...this.state.current_election}/>
