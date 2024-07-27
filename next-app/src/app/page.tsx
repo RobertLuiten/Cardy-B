@@ -24,6 +24,7 @@ export default function Home() {
   const can10 = new Candidate({candidate_name : "VeeBee"});
   const can11 = new Candidate({candidate_name : "Zeus"});
   const can12 = new Candidate({candidate_name : "Joey"});
+  const can13 = new Candidate({candidate_name : "Cool Rob"});
 
   //As you can see, candidates are placed into array for Contests (hard-coded for demo)
   const candidates1 = [can1, can2, can3, can4];
@@ -32,7 +33,7 @@ export default function Home() {
   const contestinfo1 : ContestProps = {contest_name : "Seattle Mayor", candidates : candidates1};
   const contestinfo2 : ContestProps = {contest_name : "Robville Mayor", candidates : candidates2};
   const contestinfo3 : ContestProps = {contest_name : "The Sherrif", candidates : candidates3};
-  const contestinfo4 : ContestProps = {contest_name : "Coolest Guy", candidates : [can1]};
+  const contestinfo4 : ContestProps = {contest_name : "Coolest Guy", candidates : [can13]};
 
   //Election props are basically collections of Contests
   const electioninfo1 : ElectionProps = {election_type : "General Election", contests : [contestinfo1, contestinfo2, contestinfo3, contestinfo4]};
