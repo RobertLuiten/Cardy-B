@@ -1,0 +1,730 @@
+  [
+  {
+    "election_id": 1,
+    "election_type": "primary",
+    "voting_start": 20230714,
+    "register_by": 20230724,
+    "voting_end": 20230801,
+    "contests": [
+      {
+        "boundary_type": "county council",
+        "title_string": "county council",
+        "area_name": "king",
+        "district_char": "4",
+        "position_char": null,
+        "candidates": [
+          {
+            "name": "Becka Johnson Poppe",
+            "image": "https://info.kingcounty.gov/kcelections/vote/contests/GetPhoto.ashx?webapiaddress=https://websvc.kingcounty.gov/elections/WEBAPI/&candidateid=1604694&electionid=38&contestid=123797",
+            "email": "info@votebecka.com",
+            "website": "www.votebecka.com",
+            "about": {
+              "politigram": {
+                "community": 90,
+                "humanitarianism": 70,
+                "prosperity": 75,
+                "liberty": 60,
+                "utilitarianism": 95
+              },
+              "education": {
+                "text": "Master of Public Administration, and Certificate in Environmental Management, UW Evans School; BA, Whitman College",
+                "community": [[0, 38]],
+                "utilitarianism": [[37, 77]]
+              },
+              "occupation": {
+                "text": "King County Budget and Policy Manager",
+                "community": [[0, 38]]
+              },
+              "statement": {
+                "text": "I know what it takes to move progressive policy forward in King County because I’ve been doing it for over a decade.As Budget & Policy Manager for King County, I direct half the County’s $16 billion budget, including metro transit and parks. I’ve advanced environmental and racial justice imperatives to create a $20m Climate Equity program that funds green home energy conversions and new affordable housing. As the UW’s Director of Policy, Planning & State Operations, I implemented paid family and medical leave, and championed legislation that delivered affordable higher education to thousands of students.King County is bigger than 15 other states, we have the responsibility to lead on issues from homelessness to transit to climate change.I will bring my experience getting things done at the County to ensure we protect our environment, advance equity, and grow our economy. Helping the unhoused is an urgent priority, we must scale up supportive services that save lives and build healthy communities for everyone. We need safe, reliable public transportation throughout District 4, which is why I’ve proposed a Transportation Benefit District for the county. I will also increase investments in renewable energy and green development in public and private projects to ensure our region, and world, are livable for generations to come.Together, we can make real progress for our families, neighbors, and communities in District 4, and I would be honored to earn your vote.Endorsements: National Women’s Political Caucus, King County Young Democrats, UW Young Democrats, Public Lands Commissioner Hilary Franz, County Councilmember Joe McDermott, State Representatives: Liz Berry and Kristine Reeves, community leaders Dorothy Bullitt and Cary Moon, Seattle City Councilmember Lisa Herbold, Former City Councilmembers Nick Licata and Abel Pacheco, King Conservation District Supervisor Csenka Favorini-Csorba, and dozens of local business, nonprofit, and community leaders.",
+                "utilitarianism": [[0, 117]]
+              },
+              "financing": {
+                "total_contributions": 20000,
+                "total_spending": 10000,
+                "top_donors": [
+                  {
+                    "name": "King County Democrats",
+                    "amount": 5000
+                  },
+                  {
+                    "name": "King County Young Democrats",
+                    "amount": 5000
+                  }
+                ]
+              },
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Jorge L. Barón",
+            "image": "https://info.kingcounty.gov/kcelections/vote/contests/GetPhoto.ashx?webapiaddress=https://websvc.kingcounty.gov/elections/WEBAPI/&candidateid=1605890&electionid=38&contestid=123797",
+            "email": "info@electjorgebaron.com",
+            "website": "www.electjorgebaron.com",
+            "about": {
+              "politigram": {
+                "community": 70,
+                "humanitarianism": 95,
+                "prosperity": 80,
+                "liberty": 50,
+                "utilitarianism": 40
+              },
+              "education": {
+                "text": "J.D., Yale Law School; Bachelor’s in Economics and History, Duke University",
+                "prosperity": [[6, 22]]
+              },
+              "occupation": {
+                "text": "Executive Director, Northwest Immigrant Rights Project (2008-2023)",
+                "humanitarianism": [[0, 67]]
+              },
+              "statement": {
+                "text": "For the past 17 years, I have been at the forefront of the fight for immigrant rights and working to serve marginalized communities. My track record reflects a proven ability to tackle complex challenges and build coalitions.  From successfully halting deportations in the aftermath of the Trump travel ban to serving on the State Taskforce on Use of Deadly Force in Policing, I have consistently made a tangible impact by working alongside diverse communities to develop solutions. Now, I aim to bring this same commitment to equity and justice to the King County Council.As a proud father and immigrant, my vision for King County is rooted in integrity and service. I will invest in preventative, community-based, and data-driven approaches to improve public safety; climate resilience initiatives; universally affordable childcare; expanded behavioral health services; and a robust and sustainable transportation system. I am determined to develop affordable and dignified housing for all and lead on comprehensive strategies to support our unhoused neighbors.To realize this vision, I will work urgently with our state legislative partners to establish progressive revenue sources that are crucial for funding necessary investments in the future. With my understanding of the challenges faced by diverse communities in King County, I will be a strong advocate for equitable policies that address the needs of all residents.Collaboration will be critical to our success as we strive to ensure that Martin Luther King Jr. County is a welcoming and prosperous place for everyone. It would be an honor to earn your vote and continue serving our community.Endorsed by Washington Conservation Action and a coalition of local Democrats, labor unions, business and community leaders, including Congresswoman Pramila Jayapal, Rep. Liz Berry, King County Councilmember Girmay Zahilay, Seattle City Councilmember Teresa Mosqueda, and Port Commissioners Calkins, Hasegawa, and Mohamed.",
+                "humanitarianism": [[23, 133]]
+              },
+              "financing": {
+                "total_spending": 5000,
+                "top_donors": [
+                  {
+                    "name": "Washington State Labor Council",
+                    "amount": 2000
+                  }
+                ]
+              },
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Sarah Reyneveld",
+            "image": "https://info.kingcounty.gov/kcelections/vote/contests/GetPhoto.ashx?webapiaddress=https://websvc.kingcounty.gov/elections/WEBAPI/&candidateid=1606869&electionid=38&contestid=123797",
+            "email": "info@sarahreyneveld.com",
+            "website": "sarahreyneveld.com",
+            "about": {
+              "politigram": {
+                "community": 90,
+                "humanitarianism": 80,
+                "prosperity": 65,
+                "liberty": 60,
+                "utilitarianism": 85
+              },
+              "education": {
+                "text": "Law Degree and Master’s Degree in Public Administration, University of Washington; BA, Smith College",
+                "community": [[15, 56]],
+                "prosperity": [[0, 11]]
+              },
+              "occupation": {
+                "text": "Managing Assistant Attorney General, Washington State Attorney General’s Office"
+              },
+              "statement": {
+                "text": "I’m a Managing Assistant Attorney General who protects vulnerable communities and holds polluters accountable, public school mom, union member, transit rider, community advocate, and 25-year District 4 neighbor. I’m running for King County Council because we need bold and transformative action to urgently address local and regional challenges. I’ll bring my 20-year public service career in state and local government advancing complex legal, policy, and budgetary solutions, and building broad coalitions to deliver results for King County.With your vote, I'll fight for an equitable, sustainable, and just future for all — investing in solutions that center equity and opportunity. I’ll work collaboratively with our communities to build affordable housing and expand emergency shelter, behavioral health, and substance use treatment. I’ll enact upstream solutions to improve public safety, prevent gun violence, and end racial disparities in our criminal legal systems. I’ll champion frequent, reliable, and safe transit service, urgently tackle the climate crisis, and protect our environment. I’ll build on my work as Chair of the King County Women’s Advisory Board expanding childcare, behavioral and reproductive healthcare, and services for survivors of gender-based violence. As King County faces revenue shortfalls, I’ll safeguard services with needed progressive revenue solutions.  “Sarah is a proven progressive leader and advocate…”-- Attorney General Bob Ferguson“Sarah's track record advancing progressive policy and budget solutions, and work with communities...make her the clear choice…” -- Current D4 Councilmember Jeanne Kohl-Welles  “Sarah will be a bold progressive leader on the Council who is unafraid to….do the real work of problem solving...” – Councilmember Girmay ZahilayEndorsements: Washington Conservation Action; 36th, 46th, 32nd Democrats; Machinists; Building Trades; WFSE; AG Ferguson; Lands Commissioner Franz; Treasurer Pellicciotti; Current & Former County Councilmembers Kohl-Welles, Zahilay, Dembowski, Gossett, Phillips; Port Commissioners Mohamed, Calkins, Cho, Felleman; current and former legislators. I’d appreciate your support!",
+                "humanitarianism": [[46, 78]],
+                "utilitarianism": [[82, 110]]
+              },
+              "financing": {
+                "total_contributions": 400000,
+                "total_spending": 30000,
+                "top_donors": [
+                  {
+                    "name": "Walmart",
+                    "amount": 5000
+                  },
+                  {
+                    "name": "Jeffrey Bezos",
+                    "amount": 40000
+                  }
+                ]
+              },
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "boundary_type": "school district",
+        "title_string": "school district director",
+        "area_name": "vashon island",
+        "district_char": "402",
+        "position_char": "3",
+        "candidates": [
+          {
+            "name": "Gator Lanphear",
+            "image": "https://info.kingcounty.gov/kcelections/vote/contests/GetPhoto.ashx?webapiaddress=https://websvc.kingcounty.gov/elections/WEBAPI/&candidateid=1605800&electionid=38&contestid=124005",
+            "email": "gatorlanphear@hotmail.com",
+            "website": null,
+            "about": {
+              "politigram": {
+                "community": 60,
+                "humanitarianism": 70,
+                "prosperity": 80,
+                "liberty": 60,
+                "utilitarianism": 95
+              },
+              "education": {
+                "text": "BA - The Evergreen State College, Master's in Instructional Design CSUMB, Certified Educator/Artist WA State"
+              },
+              "occupation": {
+                "text": "Artist/Educator/Outreach - City of Tacoma EnviroChallenger Program",
+                "utilitarianism": [[27, 67]]
+              },
+              "statement": {
+                "text": "Gator Lanphear wants to create a Safe, Equitable, and Inclusive school district that focuses on the learners, educators, staff, and community of the Vashon Island schools.As an educator, parent, and volunteer, Gator has great knowledge and awareness of the different experiences of educators, staff, and our children.Experience: Washington State teaching credential in Art and Elementary Education; Masters in Instructional Science and Technology from California State University Monterey Bay; MS in Instructional Science and Technology (MIST), combines the latest pedagogical science and new technologies used in education.; BA – Animation/Film from the Evergreen State College in Olympia; Kindergarten teacher at Chautauqua Elementary; 4th grade teacher Tacoma Public Schools/Sacramento City Unified School District; Diversity, Equity, and Inclusion Committee – creating DEI policies for the City of Tacoma.; Educator/Artist – K – 12 for City of Tacoma’s Office of Environmental Policy and Sustainability",
+                "utilitarianism": [[494, 625]]
+              },
+              "financing": {
+                "total_contributions": 5000
+              },
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Martha Woodard",
+            "image": "https://info.kingcounty.gov/kcelections/vote/contests/GetPhoto.ashx?webapiaddress=https://websvc.kingcounty.gov/elections/WEBAPI/&candidateid=1608161&electionid=38&contestid=124005",
+            "email": "woodard.tita@gmail.com",
+            "website": null,
+            "about": {
+              "politigram": {
+                "community": 40,
+                "humanitarianism": 20,
+                "prosperity": 70,
+                "liberty": 95,
+                "utilitarianism": 80
+              },
+              "education": {
+                "text": "B.A.in History, University of Wisconsin, Madison,  M.A.in History, University of Washington, Seattle",
+                "liberty": [[0, 66]]
+              },
+              "occupation": {
+                "text": "retired teacher"
+              },
+              "statement": {
+                "text": "Public education is the bedrock of our society. As a teacher at Vashon Island High School for thirty-three years, I have seen educational trends come and go, but the core mission to provide high-quality education for all students remains the same.A perennial challenge is funding, mostly due to how our state allocates money. As the former negotiator for the Vashon Education Association, I am well acquainted with this issue. It is the Board’s duty to be fiscally responsible. This requires careful consideration, intense listening, flexibility, and gathering information from the people affected by the School Board’s decisions.I recognize that our District faces new challenges due to economic, technological, and social change. I strive to be open minded, without a preconceived agenda, to work hard, and do my best. Should you choose to cast your vote for me, know that I take this responsibility very seriously. Thank you.",
+                "prosperity": [[114, 248]]
+              },
+              "financing": {
+                "top_donors": [
+                  {
+                    "name": "Vashon Education Association",
+                    "amount": 500
+                  }
+                ]
+              },
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Angela Marshall",
+            "image": "https://info.kingcounty.gov/kcelections/vote/contests/GetPhoto.ashx?webapiaddress=https://websvc.kingcounty.gov/elections/WEBAPI/&candidateid=1609058&electionid=38&contestid=124005",
+            "email": "angelabrmarshall@gmail.com",
+            "website": null,
+            "about": {
+              "politigram": {
+                "community": 45,
+                "humanitarianism": 90,
+                "prosperity": 35,
+                "liberty": 80,
+                "utilitarianism": 30
+              },
+              "education": {
+                "text": "Bachelor of Arts, Eastern Washington University"
+              },
+              "occupation": {
+                "text": "Deputy Director, King County Office of Labor Relations",
+                "humanitarianism": [[17, 55]]
+              },
+              "statement": {
+                "text": "Leadership requires difficult decisions. Vashon needs its school board directors to lead with principled and defensible decisions. I will do that. We have seen district leadership, with acceptance of the board, operate in an unaccountable manner by sweeping serious issues under the rug, leaving problems deeply unresolved. Misplaced priorities, secrecy, and risk aversion at the expense of our children’s safety and education has fostered a deep mistrust of our institution.  I have experience and leadership skills required to effectuate tangible improvements. Change is needed when inequities, policy violations, or impactful budgetary constraints arise. I can make difficult decisions and recognize when challenging the status quo is needed.   I’m an experienced manager, labor relations professional, public servant, and mother of two children in the district who is willing to be accountable and transparent in my actions, to represent the interests of, and commitment to, educators, students, and families.",
+                "liberty": [[41, 130]]
+              },
+              "financing": {
+                "total_spending": 7000
+              },
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          },
+          {
+            "name": "River Branch",
+            "image": null,
+            "email": "riverbranch@gmail.com",
+            "website": null,
+            "about": {
+              "politigram": {},
+              "education": {},
+              "occupation": {},
+              "statement": {},
+              "financing": {},
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "election_id": 2,
+    "election_type": "general",
+    "voting_start": 20231020,
+    "register_by": 20231030,
+    "voting_end": 20231107,
+    "contests": [
+      {
+        "boundary_type": "county",
+        "title_string": "county assessor",
+        "area_name": "king",
+        "district_char": null,
+        "position_char": null,
+        "candidates": [
+          {
+            "name": "John Wilson",
+            "image": "https://info.kingcounty.gov/kcelections/vote/contests/GetPhoto.ashx?webapiaddress=https://websvc.kingcounty.gov/elections/WEBAPI/&candidateid=1612718&electionid=39&contestid=124986",
+            "email": "info@wilson4assessor.com",
+            "website": "www.electjohnwilson.com",
+            "about": {
+              "politigram": {
+                "community": 65,
+                "humanitarianism": 70,
+                "prosperity": 65,
+                "liberty": 80,
+                "utilitarianism": 45
+              },
+              "education": {
+                "text": "Graduated from University of Washington with dual major in journalism and political science",
+                "liberty": [[59, 92]]
+              },
+              "occupation": {
+                "text": "Assessor, King County Department of Assessments"
+              },
+              "statement": {
+                "text": "When King County voters elected me, I promised to be an “activist Assessor.” I have been. We have fought to protect senior homeowners from soaring values, make it easier to get your refund, and see how much that ballot measure is going to cost. But more should be done. That’s why I am asking for your vote again. I’ll fight for a truly fair and equitable property tax system. We’re in a housing crisis. Housing affordability threatens everyone – whether homeowners, seniors, renters or small business owners. Our homeless crisis leaves women and children to sleep out on the street because there is no room in the shelter. An “activist” Assessor can help. We’ve gone twice to Olympia to reform the senior and disabled property tax relief program. Now thousands of our neighbors can stay in their homes. Responding to our homelessness crisis, we found surplus public and vacant private property, which can be used for housing solutions. We have identified the land. We should put it to use. The housing shortage makes homes and apartments in King County so expensive. Smarter density can bring us more housing at a more affordable price. But our property tax system was never designed to handle annual assessed value increases of up to just over 50%. And while actual taxes, including those voter approved, are considerably less, in these inflationary times it literally hits home. I’ve been a tireless taxpayer champion. Homeowners, renters, and small businesses deserve a tax break. I'm working with Assessors statewide to save everyday people real money without gutting vital local services. I am proud to be endorsed by Democrats and Republicans, labor and business, and folks in Seattle and the suburbs. While much has been done, we must do more. I ask for your vote.",
+                "humanitarianism": [[0, 244]]
+              },
+              "financing": {
+                "total_contributions": 10000,
+                "total_spending": 7000,
+                "top_donors": [
+                  {
+                    "name": "King County Democrats",
+                    "amount": 5000
+                  },
+                  {
+                    "name": "King County Young Democrats",
+                    "amount": 5000
+                  }
+                ]
+              },
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "boundary_type": "county",
+        "title_string": "county director of elections",
+        "area_name": "king",
+        "district_char": null,
+        "position_char": null,
+        "candidates": [
+          {
+            "name": "Julie Wise",
+            "image": "https://info.kingcounty.gov/kcelections/vote/contests/GetPhoto.ashx?webapiaddress=https://websvc.kingcounty.gov/elections/WEBAPI/&candidateid=1612719&electionid=39&contestid=124987",
+            "email": "wise.julie@me.com",
+            "website": "www.juliewise.com",
+            "about": {
+              "politigram": {
+                "community": 60,
+                "humanitarianism": 70,
+                "prosperity": 55,
+                "liberty": 35,
+                "utilitarianism": 45
+              },
+              "education": {
+                "text": "Proud Graduate of Green River Community College; Certified Washington State and National Election Administrator"
+              },
+              "occupation": {
+                "text": "Current King County Director of Elections and 23-year election administrator"
+              },
+              "statement": {
+                "text": "Your confidence in our elections is crucial - to me, to my team and to the future of democracy. I am committed to removing barriers to voting and work each day to ensure our elections are secure and accessible. I have spent the last 23 years as an election administrator and bring the experience and depth of knowledge needed to run successful elections for all 1.4 million voters in our county.  Since taking office, I have overseen more than 30 elections, earning the trust and respect of voters and colleagues from across the political spectrum. I bring a passion for fostering an inclusive and transparent democratic process. Under my leadership, both our voting system and community outreach have been modernized to enhance accessibility and voter participation. The Voter Education Fund has set a new model of community partnership by providing funds and training to community organizations doing non-partisan voter registration and education in historically marginalized communities. I’ve increased the number of ballot drop boxes from 10 to nearly 80 and advocated in Olympia and in D.C. to ensure every person has meaningful access to their right to vote. I have brought in experts from the Department of Homeland Security to audit our practices and increase security. I have partnered with leaders of both political parties to ensure consistent, bipartisan oversight of our elections. We have developed an incredible team of trained, professional election administrators who work tirelessly to ensure absolutely every ballot has been counted and is accounted for. As we move forward, I remain committed to improving our voting experience and maintaining a steadfast, transparent, and nonpartisan department. Thank you for participating in our democratic process and exercising your right to vote. I ask for your vote and your continued support as we forge a path forward together.",
+                "humanitarianism": [[96, 210]]
+              },
+              "financing": {
+                "total_contributions": 15000,
+                "top_donors": [
+                  {
+                    "name": "Green River Community College",
+                    "amount": 3500
+                  },
+                  {
+                    "name": "King County Republicans",
+                    "amount": 6000
+                  }
+                ]
+              },
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Doug Basler",
+            "image": "https://info.kingcounty.gov/kcelections/vote/contests/GetPhoto.ashx?webapiaddress=https://websvc.kingcounty.gov/elections/WEBAPI/&candidateid=1612720&electionid=39&contestid=124987",
+            "email": "candidate@dougbasler.com",
+            "website": "dougbasler.com",
+            "about": {
+              "politigram": {
+                "community": 15,
+                "humanitarianism": 25,
+                "prosperity": 95,
+                "liberty": 90,
+                "utilitarianism": 20
+              },
+              "education": {
+                "text": "Central Valley HS Spokane Valley, WA. Multnomah University Portland, OR"
+              },
+              "occupation": {
+                "text":  "President at Prologue Digital Inc",
+                "prosperity": [[0, 34]]
+              },
+              "statement": {
+                "text": "Democrats, Republicans, and Independents all agree on one thing: Our elections need to be transparent, secure, and publicly verified. It’s no secret that a large cross section of the voting public has questions regarding the overall election process. Doug Basler is committed to restore trust in our voting system through responsible transparency and by actively working to include citizen oversight, balanced audits of our systems and processes, and properly maintained voter registration rolls so that everyone is confident that our elections are free, fair, and verified. Doug Basler has been a corporate business leader for many years and is uniquely qualified to lead and properly administrate the team of professionals who work at King County Elections to ensure every vote is counted exactly as the voter intended. Election integrity is key to maintaining our citizen-led democratic republic. I am committed to be sure that every aspect of the election process is overseen with energy and professionalism so that King County Elections will be viewed nationwide as a pristine example of the way elections should be held. I will work to quickly answer public requests for information while maintaining strict voter anonymity and privacy. If you believe that our elections are worth rigorous oversight, vote for Doug Basler. If you believe that every legal vote should be counted exactly as the voter intended, vote for Doug Basler. If you believe that citizen oversight is critical to maintaining the integrity of our elections, vote for Doug Basler. If you believe that elections should be transparent, secure, and publicly verified, vote for Doug Basler. Please vote for Doug Basler for Director of Elections in King County.",
+                "liberty": [[65, 134]]
+              },
+              "financing": {
+                "total_contributions": 7000
+              },
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "boundary_type": "county council",
+        "title_string": "county council",
+        "area_name": "king",
+        "district_char": "2",
+        "position_char": null,
+        "candidates": [
+          {
+            "name": "Girmay Zahilay",
+            "image": "https://info.kingcounty.gov/kcelections/vote/contests/GetPhoto.ashx?webapiaddress=https://websvc.kingcounty.gov/elections/WEBAPI/&candidateid=1612732&electionid=39&contestid=125176",
+            "email": "campaign@electgirmay.com",
+            "website": "electgirmay.com",
+            "about": {
+              "politigram": {
+                "community": 85,
+                "humanitarianism": 25,
+                "prosperity": 80,
+                "liberty": 35,
+                "utilitarianism": 45
+              },
+              "education": {
+                "text": "Stanford University (B.S.), University of Pennsylvania Law School (J.D.), Franklin High School",
+                "prosperity": [[55, 73]]
+              },
+              "occupation": {
+                "text": "King County Councilmember"
+              },
+              "statement": {
+                "text": "I have the honor of representing the district that raised me. When I drive south on Rainier, it feels like I’m watching a highlight reel from my life. I catch glimpses of myself learning how to ride a bike at New Holly, playing high school basketball for Franklin, and renting movies with my family at the old Hollywood Video. When I take that drive these days, I see all the opportunities and challenges before us in District 2. The skyrocketing cost of living is forcing people to work double shifts to pay for half the groceries. The lack of affordable homes has pushed our neighbors to live on street corners. Staffing shortages have led countless people to live in crisis without the immediate attention of first responders. In my first four years on the Council, my team and I have led major efforts to address these problems. My office formulated and passed one of the largest investments in mental health and addiction recovery in our state’s history with the Crisis Care Centers initiative. My office uplifted Skyway, leading to unprecedented investment in this neighborhood’s housing, transit, and community infrastructure. My office championed the building of thousands of homes across King County by co-sponsoring Health through Housing, home ownership initiatives, Tiny House villages, the Youth Achievement Center, and more. My office passed historic tenant protections to keep people in their homes in the wake of a global pandemic. My office created new gun violence prevention strategies to reduce the shootings in key areas around the district. These are just a fraction of our efforts but much more is needed. I am running for a second term on the King County Council to continue the work of keeping our communities safe, housed, and healthy. I hope to earn your vote.",
+                "community": [[430, 532]]
+              },
+              "financing": {
+                "total_contributions": 500000,
+                "total_spending": 20000,
+                "top_donors": [
+                  {
+                    "name": "Wendy's",
+                    "amount": 500
+                  },
+                  {
+                    "name": "Donald Trump",
+                    "amount": 50000
+                  }
+                ]
+              },
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "boundary_type": "port",
+        "title_string": "port commissioner",
+        "area_name": "seattle",
+        "district_char": null,
+        "position_char": "2",
+        "candidates": [
+          {
+            "name": "Sam Cho",
+            "image": "https://info.kingcounty.gov/kcelections/vote/contests/GetPhoto.ashx?webapiaddress=https://websvc.kingcounty.gov/elections/WEBAPI/&candidateid=1614818&electionid=39&contestid=127128",
+            "email": "sam@electsamcho.com",
+            "website": "www.electsamcho.com",
+            "about": {
+              "politigram": {
+                "community": 35,
+                "humanitarianism": 40,
+                "prosperity": 90,
+                "liberty": 70,
+                "utilitarianism": 45
+              },
+              "education": {
+                "text": "BA American University; MSc The London School of Economics",
+                "prosperity": [[57, 84]]
+              },
+              "occupation": {
+                "text": "Entrepreneur and Public Policymaker",
+                "prosperity": [[0, 36]]
+              },
+              "statement": {
+                "text": "Four years ago, I ran on a platform that committed to creating a “port for the people.” It was a platform based on the principle that people should come over politics. As soon as I was sworn in for my term in January of 2020, this was put to the test. COVID-19 was a once-in-a-generation pandemic that truly shook the foundations of our society. We saw chaos in supply chain logistics and travel through the airport came to a screeching halt.  I’m proud that despite COVID-19, the port weathered the pandemic without laying off a single port employee and saved every small and minority dining and retail tenant at the airport from going out of business. We were able to do this because we made principled decisions that put people first. Despite the pandemic, we were able to invest in the airport to get upgraded from 3 to 4-stars by Skytrax and we won “Best Airport in North America” in 2022 and 2023. We were also the only port on the west coast to add container terminal space during the pandemic. I have worked tirelessly to ensure the growth and economic prosperity of King County, promote sustainability, and combat human trafficking. I’m asking for 4 more years because the job’s not finished. In a post-pandemic world, we must build the “port of the future.” A future where we create the next generation of strong family wage jobs; A future where we are the greenest port in North America; A future where we usher in new technologies such as hydrogen and offshore wind. With your support, we can build a port of the future that we can all be proud of.  Endorsed by over 50 local elected leaders, Seattle Building Trades, ILWU, Washington Conservation Action, King County Democrats and many others.",
+                "liberty": [[16, 168]]
+              },
+              "financing": {
+                "total_contributions": 10000,
+                "total_spending": 3000,
+                "top_donors": [
+                  {
+                    "name": "Washington State Labor Council",
+                    "amount": 2000
+                  },
+                  {
+                    "name": "Washington Conservation Action",
+                    "amount": 1000
+                  }
+                ]
+              },
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "boundary_type": "city",
+        "title_string": "mayor",
+        "area_name": "algona",
+        "district_char": null,
+        "position_char": null,
+        "candidates": [
+          {
+            "name": "Troy Linnell",
+            "image": "https://info.kingcounty.gov/kcelections/vote/contests/GetPhoto.ashx?webapiaddress=https://websvc.kingcounty.gov/elections/WEBAPI/&candidateid=1613170&electionid=39&contestid=125483",
+            "email": "Troy_linnell@msn.com",
+            "website": null,
+            "about": {
+              "politigram": {
+                "community": 45,
+                "humanitarianism": 50,
+                "prosperity": 90,
+                "liberty": 60,
+                "utilitarianism": 40
+              },
+              "education": {},
+              "occupation": {
+                "text": "Current Mayor / Retired"
+              },
+              "statement": {
+                "text": "Occupation: Retired, 30+ years Class-A Truck Industry General Manager Algona needs a mayor who will advocate for our interests in projects requiring regional collaboration, support city employees’ efforts, and ensure city priorities reflect citizens’ needs. I hope to continue working on behalf of residents as Mayor. I firmly believe in our city’s bright future and want to help it grow. My wife and I have lived in the area for 40+ years and in Algona for 17. Our children and grandchildren also live here, inspiring me to work towards the Algona’s future. I served on City Council for seven years, becoming Mayor in January. I’ve supported: resolving flooding via storm drain improvement and cleaning the Highway 167 ditch; improving city streets; upgrading old water and sewer lines; and developing housing and parks. Strong leadership will embrace the future while protecting the character of our “small city with a big heart.",
+                "prosperity": [[70, 258]]
+              },
+              "financing": {
+                "total_contributions": 20000,
+                "total_spending": 100,
+                "top_donors": [
+                  {
+                    "name": "Algona City Council",
+                    "amount": 50
+                  },
+                  {
+                    "name": "Algona City Employees",
+                    "amount": 10000
+                  }
+                ]
+              },
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          },
+          {
+            "name": "Mathew Bailey",
+            "image": "https://info.kingcounty.gov/kcelections/vote/contests/GetPhoto.ashx?webapiaddress=https://websvc.kingcounty.gov/elections/WEBAPI/&candidateid=1613171&electionid=39&contestid=125483",
+            "email": "mathewdbailey0@gmail.com",
+            "website": null,
+            "about": {
+              "politigram": {
+                "community": 80,
+                "humanitarianism": 70,
+                "prosperity": 50,
+                "liberty": 45,
+                "utilitarianism": 30
+              },
+              "education": {},
+              "occupation": {
+                "text": "Public Works Operations"
+              },
+              "statement": {
+                "text": "Leadership means listening to everyone, shelving personal agendas and representing All of the people. That’s how I’ll lead when serving as your Mayor of City of Algona. If we want to address the many problems facing us here at home—drugs, crime, failing infrastructure and, lack of code enforcement —we need leaders who understand and are willing to reach out to every neighbor forming partnerships with our residents, our businesses and our community to find solutions. Balancing all our needs as Algona residents.  The need to expand our tax base. A thriving business community broadens our tax base bringing good paying jobs with benefits and allows us to fund our, community center, police, and public works department. It’s all about quality of life.",
+                "community": [[0, 101]]
+              },
+              "financing": {
+                "total_contributions": 50000
+              },
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "boundary_type": "city",
+        "title_string": "city council",
+        "area_name": "algona",
+        "district_char": null,
+        "position_char": "1",
+        "candidates": [
+          {
+            "name": "William Thomas",
+            "image": "https://info.kingcounty.gov/kcelections/vote/contests/GetPhoto.ashx?webapiaddress=https://websvc.kingcounty.gov/elections/WEBAPI/&candidateid=1613174&electionid=39&contestid=125486",
+            "email": "wbthomas303@msn.com",
+            "website": null,
+            "about": {
+              "politigram": {
+                "community": 100,
+                "humanitarianism": 0,
+                "prosperity": 50,
+                "liberty": 40,
+                "utilitarianism": 0
+              },
+              "education": {
+                "text": "Some College; Life Experience"
+              },
+              "occupation": {
+                "text": "City of Kent Public Works Manager"
+              },
+              "statement": {
+                "text": "As a resident of Algona since 1991, my wife, Sheryl and I, have invested our lives into this community. Being your representative for the past 14 years, I have worked collaboratively with others to improve the quality of life for our residents. Myself and other members of the council have accomplished many good things for our small town. The Algona Community Center stands out as one of our major achievements. This center services people of all ages and has been a hub for our community. I have been and always will be a strong supporter of the men and women who serves this community.Both our Police and Public Works teams have served with dedication and honor. I serve on the Algona Finance Committee and the Valley Regional Fire Authority's Board of Governance. If re-elected, I will continue to serve this community to the best of my ability. Thank you.",
+                "community": [[0, 103]]
+              },
+              "financing": {
+                "total_contributions": 10500,
+                "total_spending": 750,
+                "top_donors": [
+                  {
+                    "name": "City of Kent",
+                    "amount": 5000
+                  }
+                ]
+              },
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "boundary_type": "school district",
+        "title_string": "school district director",
+        "area_name": "auburn",
+        "district_char": "408",
+        "position_char": "1",
+        "candidates": [
+          {
+            "name": "Sheilia McLaughlin",
+            "image": null,
+            "email": "McLaughsalot204@gmail.com",
+            "website": null,
+            "about": {
+              "politigram": {},
+              "education": {},
+              "occupation": {},
+              "statement": {},
+              "financing": {},
+              "sources": [
+                {
+                  "name": "King County voter pamphlet",
+                  "link": "https://info.kingcounty.gov/kcelections/Vote/contests/candidates.aspx?eid=38"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "election_id": 3,
+    "election_type": "primary",
+    "voting_start": 20240719,
+    "register_by": 20240729,
+    "voting_end": 20240806,
+    "contests": []
+  }
+]
+
