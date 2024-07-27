@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 //import { EligibleElections, EligibleElectionsProps } from "@/electionComponents/eligibleElections";
 
 /**
- * This is a simple proof of concept I set up, feel free to mess with it as needed!
+ * This is a simple demo using the provided electionFoo.JSON file provided to me
  * @returns A render of the simple demo I set up!
  */
 export default function Home() {
