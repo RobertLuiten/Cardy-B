@@ -68,14 +68,20 @@ export class Contest extends React.Component <ContestProps, ContestState> {
 
     /**
      * Renders the contest
-     * @returns A rendered list of the pinned candidate and others for the elections
+     * @returns A rendered list of the pinned candidate and others for the elections, or an empty section if there are no candidates avalible
      */
         render() {
+            if (this.candidates.length == 0){
+                return(<div>
+                    <h3 className="font-bold text-xl">{this.contest_name}</h3>
+                    <p>Sorry, it seems there are no candidates for this election yet!</p>
+                </div>)
+            }
             return (
                 <div>
                     <h3 className="font-bold text-xl">{this.contest_name}</h3>
                     <div >
-                        {this.renderLists()}
+                        {this.renderCandidates()}
                     </div>
                 </div>
             );
@@ -86,7 +92,7 @@ export class Contest extends React.Component <ContestProps, ContestState> {
      * @returns A render of both lists next to each other, autopins candidates if there's more than 1 candidate in the race and all others are rejected,
      * or nothing if a candidate's been selected
      */
-    renderLists(){
+    renderCandidates(){
         if (this.state.pinned != null){
             return (
                 <div></div>
@@ -97,6 +103,18 @@ export class Contest extends React.Component <ContestProps, ContestState> {
         const remaining = array.filter(item => item[1] === false);
         if (remaining.length == 1 && this.candidates.length > 1 && !this.state.restored){
             this.pinCandidate(remaining[0][0]);
+        } else if (this.candidates.length == 1){
+            return (<div className="flex-none content-center bg-card hover:bg-neutral-100 elevation-1 border border-1 rounded-lg p-6 flex flex-col gap-0 items-start h-full w-[calc(200px+1.5rem)]">
+                {this.candidates[0].render()}
+                <div>
+                    <div>
+                        <button className="rounded-lg w-full h-full bg-[#947fee] hover:bg-[#D3D3D3]" 
+                        onClick={() => this.pinCandidate(this.candidates[0])}>Vote</button>
+                        </div>
+                    </div>
+                </div>
+            );
+            
         }
         if (this.state.restored){
             return (

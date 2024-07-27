@@ -32,9 +32,10 @@ export default function Home() {
   const contestinfo1 : ContestProps = {contest_name : "Seattle Mayor", candidates : candidates1};
   const contestinfo2 : ContestProps = {contest_name : "Robville Mayor", candidates : candidates2};
   const contestinfo3 : ContestProps = {contest_name : "The Sherrif", candidates : candidates3};
+  const contestinfo4 : ContestProps = {contest_name : "Coolest Guy", candidates : [can1]};
 
   //Election props are basically collections of Contests
-  const electioninfo1 : ElectionProps = {election_type : "General Election", contests : [contestinfo1, contestinfo2, contestinfo3]};
+  const electioninfo1 : ElectionProps = {election_type : "General Election", contests : [contestinfo1, contestinfo2, contestinfo3, contestinfo4]};
   const electioninfo2 : ElectionProps = {election_type : "Primary Election", contests : [contestinfo1, contestinfo2]};
 
   //And once again, EligibleElectionProps are basically collections of elections
