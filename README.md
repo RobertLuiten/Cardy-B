@@ -29,7 +29,7 @@ Since each interface and the hierachy is structured the same way that ClearVote'
 
 **TODOS**
 
-Besides styling which isn't a major issue at the moment for the scope of this project, implementing a dropdown to allow the user to select elections that they're eligible for may be a good idea!
+Besides styling which isn't a major issue at the moment for the scope of this project, implementing the EligibleElections parent class so users can select one of the many elections that they're eligible for is! At the moment, it doesn't work unfortunately, so that's a major TODO!
 
 
 Note: For people reading this without context in the future, I hope you appriciate my awesome graphic design!

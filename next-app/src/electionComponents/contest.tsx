@@ -88,13 +88,13 @@ export class Contest extends React.Component <ContestProps, ContestState> {
         render() {
             if (this.contest_info.candidates.length == 0){
                 return(<div>
-                    <h3 className="font-bold text-xl">{this.contest_info.title_string}</h3>
+                    <h3 className="font-bold text-xl capitalize">{this.contest_info.title_string}</h3>
                     <p>Sorry, it seems there are no candidates for this election yet!</p>
                 </div>)
             }
             return (
                 <div>
-                    <h3 className="font-bold text-xl">{this.contest_info.title_string}</h3>
+                    <h3 className="font-bold text-xl capitalize">{this.contest_info.title_string}</h3>
                     <div >
                         {this.renderCandidates()}
                     </div>

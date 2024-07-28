@@ -12,7 +12,7 @@ import React from "react";
  */
 export interface CandidateProps {
     /**The name of the Candidate */
-    name : String;
+    name : string;
     /**A link to a headshot for the candidate, or null if none */
     image : string|null;
     /**The email for the candidate, or null if none */
@@ -94,7 +94,7 @@ export class Candidate extends React.Component {
             return (
                 <div>
                     <h1 className="text-sm sm:text-lg">{this.candidate_info.name}</h1>
-                    <img src={this.candidate_info.image} alt="Girl in a jacket"></img>
+                    <img src={this.candidate_info.image} alt={this.candidate_info.name}></img>
                     <p>{this.candidate_info.email}</p>
                     <p>{this.candidate_info.website}</p>
                     <p>Communitiy: {this.candidate_info.about.politigram.community}</p>
@@ -106,6 +106,7 @@ export class Candidate extends React.Component {
         return (
             <div>
                 <h1 className="text-sm sm:text-lg">{this.candidate_info.name}</h1>
+                <p>No Image Avalible!</p>
                 <p>{this.candidate_info.email}</p>
                 <p>{this.candidate_info.website}</p>
             </div>

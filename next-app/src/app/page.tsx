@@ -1,8 +1,7 @@
 "use client"
 
-import { Candidate, PolitigramProps } from "@/electionComponents/candidate";
-import { ContestProps } from "@/electionComponents/contest";
 import { Election, ElectionProps } from "@/electionComponents/election";
+import { EligibleElections, EligibleElectionsProps } from "@/electionComponents/eligibleElections";
 import { useEffect, useState } from "react";
 
 /**
@@ -19,7 +18,8 @@ export default function Home() {
 
 /**
  * Gets the election info file for the purpose of this demo!
- * @returns A render of the election based on the JSON file electionFoo
+ * @returns A render of the election based on the JSON file electionFoo.json, but will work for any ClearVote
+ * JSON file!
  */
 const MyComponent = () => {
   const [data, setData] = useState(null);
@@ -36,11 +36,12 @@ const MyComponent = () => {
     return <div>Loading...</div>;
   }
 
-  const electionInfo : ElectionProps = data[1];
+  //TODO: Fix EligibleElections components so it actually works!
+  const eligibleElections : EligibleElectionsProps = {elections : data};
 
   return (
     <div>
-      <Election {...electionInfo} />
+      <Election {...eligibleElections.elections[0]}/>
     </div>
   );
 };

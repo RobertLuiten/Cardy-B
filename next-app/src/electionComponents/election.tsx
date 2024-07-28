@@ -83,7 +83,7 @@ export class Election  extends React.Component <ElectionProps, ElectionState> {
     render() {
         return (
             <div>
-                <h1 className="text-3xl font-bold">{this.election_info.election_type}</h1>
+                <h1 className="text-3xl font-bold capitalize">{this.election_info.election_type}</h1>
                 <h1 className="text-xl font-bold">Voting Starts: {Math.floor((this.election_info.voting_start%10000)/100)}/
                     {Math.floor(this.election_info.voting_start%100)}/
                     {Math.floor(this.election_info.voting_start/10000)}
@@ -180,7 +180,7 @@ export class Election  extends React.Component <ElectionProps, ElectionState> {
         if (candidate === null){
             return (
                 <div>
-                    {election_name}
+                    <p className="capitalize">{election_name}</p>
                     <p>No candidate selected!</p>
                 </div>
             );
@@ -189,7 +189,7 @@ export class Election  extends React.Component <ElectionProps, ElectionState> {
         if (remove != undefined){
             return (
                 <div>
-                    {election_name}
+                    <p className="capitalize">{election_name}</p>
                     <Candidate {...candidate}/>
                     <button className="rounded-lg w-full h-full bg-[#ff0000] hover:bg-[#D3D3D3]"
                     onClick={() => {remove(); this.removeCandidate(election_name, candidate);}}>Remove Vote</button>
