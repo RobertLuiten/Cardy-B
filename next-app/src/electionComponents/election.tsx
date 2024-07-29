@@ -44,7 +44,7 @@ export interface ElectionState{
 
 
 /**
- * A simple election class!
+ * An election composed of contests
  */
 export class Election  extends React.Component <ElectionProps, ElectionState> {
 
