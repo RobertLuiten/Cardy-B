@@ -63,7 +63,6 @@ export class EligibleElections extends React.Component<EligibleElectionsProps, E
     */
     handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
         const newIndex = parseInt(event.target.value, 10);
-        console.log("Changing current election to:", newIndex);  // Debugging line
         this.setState({ currentElection: newIndex });
     }
 
