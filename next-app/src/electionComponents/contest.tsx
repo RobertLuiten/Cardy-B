@@ -36,7 +36,7 @@ export interface ContestState {
     pinned: CandidateProps | null;
     /**The set of candidates rejected by the user */
     rejected: Set<CandidateProps>;
-    /**Determines whether the election has just been restored from the ballot */
+    /**Must be true if a candidate's vote was just removed and they're the only candidate not rejected, false otherwise */
     restored: Boolean;
 }
 
@@ -94,6 +94,7 @@ export class Contest extends React.Component<ContestProps, ContestState> {
      * or nothing if a candidate's been selected
      */
     renderCandidates() {
+        //Empty message if there's no candidates in the contest
         if (this.state.pinned != null) {
             return (
                 <div></div>
@@ -119,6 +120,7 @@ export class Contest extends React.Component<ContestProps, ContestState> {
                 </div>
             );
         }
+        //If none of these cases are right, it simply renders the remaining then rejected candidates like normal!
         return (
             <div className="flex flex-row">
                 {this.contest_info.candidates.map((candidate, index) =>
@@ -141,7 +143,9 @@ export class Contest extends React.Component<ContestProps, ContestState> {
      * @returns A rendered candidate card if the candidate isn't rejected, nothing if otherwise
      */
     renderRemaining(candidate: CandidateProps) {
+        //Checks to make sure the candidate hasn't been rejected before rendering
         if (!this.state.rejected.has(candidate)) {
+            //If the candidate has just been restored by eliminating other candidates, the "Vote" button will be the only option
             if (this.state.restored) {
                 return (
                     <div className="flex-none content-center bg-card hover:bg-neutral-100 elevation-1 border border-1 rounded-lg p-6 flex flex-col gap-0 items-start h-full w-[calc(200px+1.5rem)]">
@@ -156,6 +160,7 @@ export class Contest extends React.Component<ContestProps, ContestState> {
                 );
 
             }
+            //If not, the user will have both the "Vote" & "Reject" button
             return (
                 <div className="flex-none content-center bg-card hover:bg-neutral-100 elevation-1 border border-1 rounded-lg p-6 flex flex-col gap-0 items-start h-full w-[calc(200px+1.5rem)]">
                     <Candidate {...candidate} />
@@ -180,6 +185,7 @@ export class Contest extends React.Component<ContestProps, ContestState> {
      * @returns A rendered candidate card if the Candidate is rejected, nothing if otherwise
      */
     renderRejected(candidate: CandidateProps) {
+        //Sees whether the candidate has been rejected or not
         if (this.state.rejected.has(candidate)) {
             return (
                 <div className="flex-none bg-card hover:bg-neutral-100 elevation-1 border 
@@ -232,7 +238,6 @@ export class Contest extends React.Component<ContestProps, ContestState> {
         } else {
             this.setState({ restored: false });
         }
-        console.log(this.state.restored);
     }
 
 }

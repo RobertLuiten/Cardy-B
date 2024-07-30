@@ -22,26 +22,24 @@ export default function Home() {
  * JSON file!
  */
 const MyComponent = () => {
+  //Why does Typescript have such a weird set-up for fetching JSON files?!
   const [data, setData] = useState(null);
-
-  //JavaScript makes me want to go insane sometimes
   useEffect(() => {
     fetch('/data/electionFoo.json')
       .then((response) => response.json())
       .then((jsonData) => setData(jsonData))
       .catch((error) => console.error('Error fetching JSON:', error));
   }, []);
-
+  //Loading icon
   if (!data) {
     return <div>Loading...</div>;
   }
-
-  //TODO: Fix EligibleElections components so it actually works!
-  const eligibleElections : EligibleElectionsProps = {elections : data};
-
+  //Converts the JSON so it'll actually work as election props!
+  const eligibleElections: EligibleElectionsProps = { elections: data };
+  //Simply renders the EligibleElection component!
   return (
     <div>
-      <Election {...eligibleElections.elections[0]}/>
+      <EligibleElections {...eligibleElections} />
     </div>
   );
 };

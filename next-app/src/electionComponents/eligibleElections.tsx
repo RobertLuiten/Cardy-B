@@ -1,71 +1,69 @@
-"use client"
+"use client";
 
 import React from "react";
-import { Election, ElectionProps } from "./election"
-
-/**
- * A simple implemenetation of the Eligible Elections class!
- * TODO: FIX!!
- */
+import { Election, ElectionProps } from "./election";
 
 /**
  * The Props for all EligibleElections for the user
  */
 export interface EligibleElectionsProps {
-    /**The elections that the user is eligible for */
-    elections : ElectionProps[];
+    /** The elections that the user is eligible for */
+    elections: ElectionProps[];
 }
 
 /**
  * The internal state of the EligibleElections class
  */
 export interface EligibleElectionsState {
-    /**The currently selected election by the user (index of the election_list array, see below) */
-    currentElection : ElectionProps;
+    /** The currently selected election by the user (index of the election array, see below) */
+    currentElection: number;
 }
 
 /**
- * The interface for an EligibleElections
+ * The EligibleElections class allows the user to select a specific election!
  */
-export interface EligibleElections {
-    /**The elections which the user is eligible for */
-    elections : ElectionProps[];
-    /**Renders the EligibleElections component */
-    render() : any;
-}
+export class EligibleElections extends React.Component<EligibleElectionsProps, EligibleElectionsState> {
 
-/**
- * The EligibleElections class, relatively simple for now!
- */
-export class EligibleElections extends React.Component <EligibleElectionsProps, EligibleElectionsState>{
-    
     /**
      * Creates a new EligibleElections!
      * @param props The Props for the user's EligibleElections
      */
-    constructor (props : EligibleElectionsProps){
+    constructor(props: EligibleElectionsProps) {
         super(props);
-        this.elections = props.elections;
-        this.state = {currentElection : this.elections[0]};
+        // Defaults to the first election in the props for now!
+        this.state = { currentElection: 0 };
+        this.handleChange = this.handleChange.bind(this);
     }
 
     /**
      * The renderer for the EligibleElections component!
      * @returns A render of the EligibleElections component
      */
-    render () {
+    render() {
         return (
             <div>
-                <h3 className="text-xl">Selection An Election:</h3>
-                {this.elections.map((election, index) =>
-                <div key={index}>
-                    <button onClick={() => this.setState({currentElection : election})}>{election.election_type}</button>
-                </div>
-                )}
-                <br></br>
-                <Election {...this.state.currentElection}/>
+                <h3 className="text-xl">Select An Election:</h3>
+                <select value={this.state.currentElection} onChange={this.handleChange} className="capitalize">
+                    {this.props.elections.map((election, index) => (
+                        <option key={index} value={index} className="capitalize">
+                            {election.election_type}
+                        </option>
+                    ))}
+                </select>
+                <br />
+                <Election key={this.state.currentElection} {...this.props.elections[this.state.currentElection]} />
             </div>
         );
+    }
+
+    /**
+    * Changes the selected election
+    * @param event The change event from the select element
+    */
+    handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
+        const newIndex = parseInt(event.target.value, 10);
+        console.log("Changing current election to:", newIndex);  // Debugging line
+        this.setState({ currentElection: newIndex });
     }
 
 }

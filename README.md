@@ -10,6 +10,8 @@ Cardy-B works with ClearVote's parsed JSON files: an example of these files can 
 
 The heirachy works as follows (you can find all these files in Cardy-B/next-app/src/electionComponents):
 
+EligibleElections (in eligibleElections): EligibleElections stores all of the elections which is a user is eligible for and allows them to select a specific one to view. It passes ElectionProps to Election components
+
 Elections (in elections): Elections stores the ballot of selected candidate choices for the user, while also rendering it's name, the user's ballot, and all of the Contests that are a part of that election. It passes down a ContestProp from the array "contests" for each contest. It also passes down the "addCandidate" function from Elections to each ContestProp so that the ballot can be updated.
 
 Contest (in contest): The Contest function passes up the "restoreCandidate" function to it's election if it's applicable! Contest prints out the contest name, all of the candidates running, along with giving the user the option to vote for or 'reject' candidates. Once a user selects a candidate or narrows down their choices, the row will collapse until a candidate is deselected. It passes CandidateProps to Candidate components.
@@ -17,7 +19,7 @@ Contest (in contest): The Contest function passes up the "restoreCandidate" func
 Candidate (in candidate): Probably the simpliest class in this entire project, candidate basically renders a candidate card based on it's candidate info for now.
 
 A beautiful flow-chart:
-Election -> Contest -> Candidate
+EligibleElections -> Election -> Contest -> Candidate
 
 **How it's structured!**
 
@@ -29,7 +31,7 @@ Since each interface and the hierachy is structured the same way that ClearVote'
 
 **TODOS**
 
-Besides styling which isn't a major issue at the moment for the scope of this project, implementing the EligibleElections parent class so users can select one of the many elections that they're eligible for is! At the moment, it doesn't work unfortunately, so that's a major TODO!
+Besides styling which isn't a major issue at the moment for the scope of this project, but also making it so that the EligibleElection components doesn't delete the user's selections when they switch between elections along with showing the most recent election.
 
 
 Note: For people reading this without context in the future, I hope you appriciate my awesome graphic design!
