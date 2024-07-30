@@ -50,7 +50,8 @@ export class EligibleElections extends React.Component<EligibleElectionsProps, E
                         </option>
                     ))}
                 </select>
-                <br />
+                <br></br>
+                <br></br>
                 <Election key={this.state.currentElection} {...this.props.elections[this.state.currentElection]} />
             </div>
         );
