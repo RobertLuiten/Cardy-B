@@ -30,8 +30,21 @@ export class EligibleElections extends React.Component<EligibleElectionsProps, E
      */
     constructor(props: EligibleElectionsProps) {
         super(props);
+        /**The array which stores the date off all the elections */
+        const date_array : {voting_end : number, index : number}[] = new Array;
+        this.props.elections.map((value, index) => date_array.push({voting_end : value.voting_end, index : index}));
+        const date = new Date();
+        /**The current date */
+        const cur_date = date.getFullYear() * 10000 + (date.getMonth() + 1) * 100 + date.getDay();
+        date_array.filter((election) => election.voting_end >= cur_date);
+        if (date_array.length == 0){
+            this.state = { currentElection: 0 };
+        } else {
+            /**Convoluted sorting! */
+            this.state = { currentElection: date_array.toSorted()[0].index };
+        }
         // Defaults to the first election in the props for now!
-        this.state = { currentElection: 0 };
+        
         this.handleChange = this.handleChange.bind(this);
     }
 
@@ -46,7 +59,7 @@ export class EligibleElections extends React.Component<EligibleElectionsProps, E
                 <select value={this.state.currentElection} onChange={this.handleChange} className="capitalize">
                     {this.props.elections.map((election, index) => (
                         <option key={index} value={index} className="capitalize">
-                            {election.election_type}
+                            {election.election_type}: {this.getDate(election.voting_start)} - {this.getDate(election.voting_end)}
                         </option>
                     ))}
                 </select>
@@ -64,6 +77,16 @@ export class EligibleElections extends React.Component<EligibleElectionsProps, E
     handleChange(event: React.ChangeEvent<HTMLSelectElement>) {
         const newIndex = parseInt(event.target.value, 10);
         this.setState({ currentElection: newIndex });
+    }
+
+    /**
+     * Helper function for converting unformated dates from elections into strings
+     * @param dateNum A numbered date in the form of YYYYMMDD
+     * @returns The date in string form "YYYY/MM/DD"
+     */
+    getDate(dateNum : number) : string {
+        return (Math.floor((dateNum % 10000) / 100) + "/" + 
+            Math.floor(dateNum % 100) + "/" + Math.floor(dateNum / 10000));
     }
 
 }

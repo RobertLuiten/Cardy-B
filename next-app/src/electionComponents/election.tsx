@@ -26,8 +26,6 @@ export interface ElectionProps {
  * The interface for an election
  */
 export interface Election {
-    /**The information about that particular election */
-    election_info: ElectionProps;
     /**Renders the election component */
     render(): any;
 }
@@ -55,7 +53,6 @@ export class Election extends React.Component<ElectionProps, ElectionState> {
     constructor(props: ElectionProps) {
         super(props);
         this.addCandidate = this.addCandidate.bind(this);
-        this.election_info = props;
         props.contests.map((contest) => contest.addCandidate = this.addCandidate);
         const newBallot = new Map<String, CandidateProps | null>();
         const remove_vote = new Map<CandidateProps, () => void>();
@@ -82,7 +79,7 @@ export class Election extends React.Component<ElectionProps, ElectionState> {
      */
     render() {
         //Edge case for empty election!
-        if (this.election_info.contests.length == 0) {
+        if (this.props.contests.length == 0) {
             return (
                 <div>
                     {this.renderTitleAndDate()}
@@ -95,9 +92,9 @@ export class Election extends React.Component<ElectionProps, ElectionState> {
         return (
             <div>
                 {this.renderTitleAndDate()}
-                <h1 className="text-xl font-bold">Register By: {Math.floor((this.election_info.register_by % 10000) / 100)}/
-                    {Math.floor(this.election_info.register_by % 100)}/
-                    {Math.floor(this.election_info.register_by / 10000)}
+                <h1 className="text-xl font-bold">Register By: {Math.floor((this.props.register_by % 10000) / 100)}/
+                    {Math.floor(this.props.register_by % 100)}/
+                    {Math.floor(this.props.register_by / 10000)}
                 </h1>
                 <br></br>
                 <div>
@@ -112,7 +109,7 @@ export class Election extends React.Component<ElectionProps, ElectionState> {
                     </div>
                 </div>
                 {this.emailInput()}
-                {this.election_info.contests.map((contest, index) =>
+                {this.props.contests.map((contest, index) =>
                     <div key={index}>
                         <br></br>
                         <Contest {...contest} />
@@ -180,14 +177,14 @@ export class Election extends React.Component<ElectionProps, ElectionState> {
     renderTitleAndDate() {
         return (
             <div>
-                <h1 className="text-3xl font-bold capitalize">{this.election_info.election_type}</h1>
-                <h1 className="text-xl font-bold">Voting Starts: {Math.floor((this.election_info.voting_start % 10000) / 100)}/
-                    {Math.floor(this.election_info.voting_start % 100)}/
-                    {Math.floor(this.election_info.voting_start / 10000)}
+                <h1 className="text-3xl font-bold capitalize">{this.props.election_type}</h1>
+                <h1 className="text-xl font-bold">Voting Starts: {Math.floor((this.props.voting_start % 10000) / 100)}/
+                    {Math.floor(this.props.voting_start % 100)}/
+                    {Math.floor(this.props.voting_start / 10000)}
                 </h1>
-                <h1 className="text-xl font-bold">Voting Ends: {Math.floor((this.election_info.voting_end % 10000) / 100)}/
-                    {Math.floor(this.election_info.voting_end % 100)}/
-                    {Math.floor(this.election_info.voting_end / 10000)}
+                <h1 className="text-xl font-bold">Voting Ends: {Math.floor((this.props.voting_end % 10000) / 100)}/
+                    {Math.floor(this.props.voting_end % 100)}/
+                    {Math.floor(this.props.voting_end / 10000)}
                 </h1>
             </div>
         );

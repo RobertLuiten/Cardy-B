@@ -49,8 +49,6 @@ export interface AboutCandidate {
  * The interface for a Candidate
  */
 export interface Candidate {
-    /**The information about a Candidate */
-    candidate_info : CandidateProps;
     /**Renders the candidate */
     render() : any;
 }
@@ -74,7 +72,7 @@ export interface PolitigramProps {
 /**
  * The class for the candidate
  */
-export class Candidate extends React.Component {
+export class Candidate extends React.Component <CandidateProps> {
 
     /**
      * Creates a new candidate
@@ -82,7 +80,6 @@ export class Candidate extends React.Component {
      */
     constructor (props : CandidateProps){
         super(props);
-        this.candidate_info = props;
     }
 
     /**
@@ -90,14 +87,14 @@ export class Candidate extends React.Component {
      * @returns A generic rendered "card" for the candidate
      */
     render() {
-        if (this.candidate_info.image != null && this.candidate_info){
+        if (this.props.image != null && this.props){
             return (
                 <div>
-                    <h1 className="text-sm sm:text-lg">{this.candidate_info.name}</h1>
-                    <img src={this.candidate_info.image} alt={this.candidate_info.name}></img>
-                    <p>{this.candidate_info.email}</p>
-                    <p>{this.candidate_info.website}</p>
-                    <p>Communitiy: {this.candidate_info.about.politigram.community}</p>
+                    <h1 className="text-sm sm:text-lg">{this.props.name}</h1>
+                    <img src={this.props.image} alt={this.props.name}></img>
+                    <p>{this.props.email}</p>
+                    <p>{this.props.website}</p>
+                    <p>Communitiy: {this.props.about.politigram.community}</p>
                     <div>
             </div>
                 </div>
@@ -105,10 +102,10 @@ export class Candidate extends React.Component {
         }
         return (
             <div>
-                <h1 className="text-sm sm:text-lg">{this.candidate_info.name}</h1>
+                <h1 className="text-sm sm:text-lg">{this.props.name}</h1>
                 <p>No Image Avalible!</p>
-                <p>{this.candidate_info.email}</p>
-                <p>{this.candidate_info.website}</p>
+                <p>{this.props.email}</p>
+                <p>{this.props.website}</p>
             </div>
         );
     }

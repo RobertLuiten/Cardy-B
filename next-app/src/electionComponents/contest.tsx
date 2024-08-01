@@ -44,8 +44,6 @@ export interface ContestState {
  * The interface for a Contest
  */
 export interface Contest {
-    /**Information about the contest */
-    contest_info: ContestProps;
     /**Renders the contest */
     render(): any;
 }
@@ -61,9 +59,8 @@ export class Contest extends React.Component<ContestProps, ContestState> {
      */
     constructor(props: ContestProps) {
         super(props);
-        this.contest_info = props;
         const candidate_map = new Map<CandidateProps, Boolean>();
-        this.contest_info.candidates.map((candidate) => candidate_map.set(candidate, false));
+        this.props.candidates.map((candidate) => candidate_map.set(candidate, false));
         this.state = { pinned: null, restored: false, rejected: new Set<CandidateProps>() };
     }
 
@@ -72,15 +69,15 @@ export class Contest extends React.Component<ContestProps, ContestState> {
      * @returns A rendered list of the pinned candidate and others for the elections, or an empty section if there are no candidates avalible
      */
     render() {
-        if (this.contest_info.candidates.length == 0) {
+        if (this.props.candidates.length == 0) {
             return (<div>
-                <h3 className="font-bold text-xl capitalize">{this.contest_info.title_string}</h3>
+                <h3 className="font-bold text-xl capitalize">{this.props.title_string}</h3>
                 <p>Sorry, it seems there are no candidates for this election yet!</p>
             </div>)
         }
         return (
             <div>
-                <h3 className="font-bold text-xl capitalize">{this.contest_info.title_string}</h3>
+                <h3 className="font-bold text-xl capitalize">{this.props.title_string}</h3>
                 <div >
                     {this.renderCandidates()}
                 </div>
@@ -101,20 +98,20 @@ export class Contest extends React.Component<ContestProps, ContestState> {
             );
         }
         //Pins the single remaining candidate as long as there's more than one in the race
-        if (this.contest_info.candidates.length - this.state.rejected.size == 1 && this.contest_info.candidates.length > 1
+        if (this.props.candidates.length - this.state.rejected.size == 1 && this.props.candidates.length > 1
             && !this.state.restored) {
             //What this confusing line basically does it grab the only remaining candidate; inefficent but nothing bad
-            this.pinCandidate(Array.from(this.contest_info.candidates).filter(candidate => !this.state.rejected.has(candidate))[0]);
-        } else if (this.contest_info.candidates.length == 1) {
+            this.pinCandidate(Array.from(this.props.candidates).filter(candidate => !this.state.rejected.has(candidate))[0]);
+        } else if (this.props.candidates.length == 1) {
             //Edge case if there's only a single Candidate in an election: only gives the user the 'vote' button!
             return (
                 <div className="flex-none content-center bg-card hover:bg-neutral-100 elevation-1 border border-1 
                     rounded-lg p-6 flex flex-col gap-0 items-start h-full w-[calc(200px+1.5rem)]">
-                    <Candidate {...this.contest_info.candidates[0]} />
+                    <Candidate {...this.props.candidates[0]} />
                     <div>
                         <div>
                             <button className="rounded-lg w-full h-full bg-[#947fee] hover:bg-[#D3D3D3]"
-                                onClick={() => this.pinCandidate(this.contest_info.candidates[0])}>Vote</button>
+                                onClick={() => this.pinCandidate(this.props.candidates[0])}>Vote</button>
                         </div>
                     </div>
                 </div>
@@ -123,12 +120,12 @@ export class Contest extends React.Component<ContestProps, ContestState> {
         //If none of these cases are right, it simply renders the remaining then rejected candidates like normal!
         return (
             <div className="flex flex-row">
-                {this.contest_info.candidates.map((candidate, index) =>
+                {this.props.candidates.map((candidate, index) =>
                     <div key={index}>
                         {this.renderRemaining(candidate)}
                     </div>
                 )}
-                {this.contest_info.candidates.map((candidate, index) =>
+                {this.props.candidates.map((candidate, index) =>
                     <div key={index}>
                         {this.renderRejected(candidate)}
                     </div>
@@ -208,9 +205,9 @@ export class Contest extends React.Component<ContestProps, ContestState> {
             this.restoreCandidate(this.state.pinned);
         }
         this.setState({ pinned: candidate });
-        if (this.contest_info.addCandidate != null && candidate != null) {
+        if (this.props.addCandidate != null && candidate != null) {
             this.restoreCandidate = this.restoreCandidate.bind(this);
-            this.contest_info.addCandidate(candidate, this.contest_info.title_string, () => this.restoreCandidate(candidate));
+            this.props.addCandidate(candidate, this.props.title_string, () => this.restoreCandidate(candidate));
         }
     }
 
@@ -233,7 +230,7 @@ export class Contest extends React.Component<ContestProps, ContestState> {
         const new_set = this.state.rejected;
         new_set.delete(candidate);
         this.setState({ pinned: null, rejected: new_set });
-        if (this.state.rejected.size === this.contest_info.candidates.length - 1) {
+        if (this.state.rejected.size === this.props.candidates.length - 1) {
             this.setState({ restored: true });
         } else {
             this.setState({ restored: false });

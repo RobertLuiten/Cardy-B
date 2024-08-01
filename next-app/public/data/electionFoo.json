@@ -298,7 +298,7 @@
     "election_type": "general",
     "voting_start": 20231020,
     "register_by": 20231030,
-    "voting_end": 20231107,
+    "voting_end": 20230729,
     "contests": [
       {
         "boundary_type": "county",
