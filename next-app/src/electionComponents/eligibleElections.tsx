@@ -21,6 +21,11 @@ export interface EligibleElectionsState {
 
 /**
  * The EligibleElections class allows the user to select a specific election!
+ * TODOS:
+ * 1. Remove the option to select a different election when the user's ballot is full (may need to pass function
+ * with Election class)
+ * 2. Allow candidates to carry over even when the user switches elections (may need to pass function to Election class)
+ * 3. Make it so EligibleElections shows the (most current -> recent upcoming -> closest past election) first
  */
 export class EligibleElections extends React.Component<EligibleElectionsProps, EligibleElectionsState> {
 
@@ -30,29 +35,36 @@ export class EligibleElections extends React.Component<EligibleElectionsProps, E
      */
     constructor(props: EligibleElectionsProps) {
         super(props);
-        /**The array which stores the date off all the elections */
-        const date_array : {voting_end : number, index : number}[] = new Array;
-        this.props.elections.map((value, index) => date_array.push({voting_end : value.voting_end, index : index}));
-        const date = new Date();
-        /**The current date */
-        const cur_date = date.getFullYear() * 10000 + (date.getMonth() + 1) * 100 + date.getDay();
-        date_array.filter((election) => election.voting_end >= cur_date);
-        if (date_array.length == 0){
-            this.state = { currentElection: 0 };
+        if (props.elections.length == 0){
+            this.state = { currentElection : -1};
         } else {
-            /**Convoluted sorting! */
-            this.state = { currentElection: date_array.toSorted()[0].index };
+            const date_array : {voting_end : number, index : number}[] = new Array;
+            this.props.elections.map((value, index) => date_array.push({voting_end : value.voting_end, index : index}));
+            const date = new Date();
+            const cur_date = date.getFullYear() * 10000 + (date.getMonth() + 1) * 100 + date.getDay();
+            let start_index = 0;
+            let best_date = this.props.elections[0].voting_start;
+            for (let i = 0; i < this.props.elections.length; i++){
+                if (this.props.elections[i].voting_start <= cur_date && this.props.elections[i].voting_end >= cur_date){
+                    start_index = i;
+                    i = this.props.elections.length;
+                }
+            }
+            //Defaults to the first election or current election for now!
+            this.state = {currentElection : start_index}
         }
-        // Defaults to the first election in the props for now!
-        
         this.handleChange = this.handleChange.bind(this);
     }
 
     /**
      * The renderer for the EligibleElections component!
-     * @returns A render of the EligibleElections component
+     * @returns A render of the EligibleElections component, or a message if no elections exist
+     * for the user
      */
     render() {
+        if (this.state.currentElection == -1){
+            <p>It seems that there's no current elections for you avalible at the moment!</p>
+        }
         return (
             <div>
                 <h3 className="text-xl">Select An Election:</h3>

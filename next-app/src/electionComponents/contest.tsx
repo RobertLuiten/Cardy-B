@@ -50,6 +50,10 @@ export interface Contest {
 
 /**
  * A contest composed of Candidates
+ * TODOS:
+ * 1. Add card slide animation when a candidate is removed from the race
+ * 2. Add Candy Crush or Tetis-esk crushing animation when a candidate is voted for from the user's ballot
+ * & the main bar vanishes!
  */
 export class Contest extends React.Component<ContestProps, ContestState> {
 
