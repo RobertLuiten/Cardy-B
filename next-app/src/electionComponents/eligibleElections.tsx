@@ -48,9 +48,13 @@ export class EligibleElections extends React.Component<EligibleElectionsProps, E
                 if (this.props.elections[i].voting_start <= cur_date && this.props.elections[i].voting_end >= cur_date){
                     start_index = i;
                     i = this.props.elections.length;
+                } else if (this.props.elections[i].voting_start - cur_date > best_date - cur_date 
+                    && this.props.elections[i].voting_start - cur_date > 0){
+                    start_index = i;
+                    best_date = this.props.elections[i].voting_start;
                 }
+                //TODO: Show recently elaspesed election
             }
-            //Defaults to the first election or current election for now!
             this.state = {currentElection : start_index}
         }
         this.handleChange = this.handleChange.bind(this);
