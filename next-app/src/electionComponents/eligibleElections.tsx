@@ -67,7 +67,7 @@ export class EligibleElections extends React.Component<EligibleElectionsProps, E
      */
     render() {
         if (this.state.currentElection == -1){
-            <p>It seems that there's no current elections for you avalible at the moment!</p>
+            <p>It seems that there are no current elections for you avalible at the moment!</p>
         }
         return (
             <div>
