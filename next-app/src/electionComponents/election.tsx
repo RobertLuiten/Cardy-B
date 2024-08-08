@@ -99,7 +99,7 @@ export class Election extends React.Component<ElectionProps, ElectionState> {
                 <br></br>
                 <div>
                     <h1 className="text-xl">{this.votesLeftMessage()}</h1>
-                    <div className="flex flex-row">
+                    <div className="overflow-auto flex flex-row">
                         {Array.from(this.state.ballot).map(([name, selection], index) =>
                             <div key={index} className="flex-none bg-card hover:bg-neutral-100 elevation-1 border 
                     border-1 rounded-lg p-6 flex flex-col gap-0 items-start h-full w-[calc(200px+1.5rem)]">

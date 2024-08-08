@@ -45,6 +45,7 @@ export class EligibleElections extends React.Component<EligibleElectionsProps, E
             let start_index = 0;
             let best_date = this.props.elections[0].voting_start;
             for (let i = 0; i < this.props.elections.length; i++){
+                //Is this right?
                 if (this.props.elections[i].voting_start <= cur_date && this.props.elections[i].voting_end >= cur_date){
                     start_index = i;
                     i = this.props.elections.length;

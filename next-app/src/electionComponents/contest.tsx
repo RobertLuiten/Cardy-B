@@ -123,7 +123,7 @@ export class Contest extends React.Component<ContestProps, ContestState> {
         }
         //If none of these cases are right, it simply renders the remaining then rejected candidates like normal!
         return (
-            <div className="flex flex-row">
+            <div className="overflow-auto flex flex-row">
                 {this.props.candidates.map((candidate, index) =>
                     <div key={index}>
                         {this.renderRemaining(candidate)}
