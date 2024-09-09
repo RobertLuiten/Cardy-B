@@ -29,9 +29,8 @@ Each class contains it's related interfaces for it's props, state, and themselve
 
 Since each interface and the hierachy is structured the same way that ClearVote's data is structured, implementation will be relatively simple! The main thing to work on will be styling!
 
-**TODOS**
-
-Besides styling which isn't a major issue at the moment for the scope of this project, but also making it so that the EligibleElection components doesn't delete the user's selections when they switch between elections along with showing the most recent election.
-
-
 Note: For people reading this without context in the future, I hope you appriciate my awesome graphic design!
+
+**A Note From Future Rob:**
+
+In the end, we did an overhaul of the Clear Vote's frontend (you can see it on my GitHub account), but I'm leaving this up for prosperity's sake!
